@@ -1,0 +1,217 @@
+/*
+-_-_-_-_-_-_-_-_-_-_-
+     Font Faces
+-_-_-_-_-_-_-_-_-_-_-
+*/
+@font-face {
+    font-family: "Shabnam Regular";
+    src: url("../fonts/shabnam/Shabnam.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Shabnam Medium";
+    src: url("../fonts/shabnam/Shabnam-Medium.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Cinema";
+    src: url("../fonts/cinema/Cinema-Font.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Archivo Black";
+    src: url("../fonts/Archivo/Archivo-Black.ttf");
+}
+/*
+-_-_-_-_-_-_-_-_-_-
+     Reset CSS
+       START
+-_-_-_-_-_-_-_-_-_-
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*
+-_-_-_-_-_-_-_-_-_-
+     Reset CSS
+        END
+-_-_-_-_-_-_-_-_-_-
+*/
+:root {
+    --primary-font: "Shabnam Regular";
+    --primary-font-md: "Shabnam Medium";
+    --secondary-font: "Cinema";
+    --primary-color: #E73213;
+    --secondary-color: #9DBEB7;
+    --third-color: #EFE6D5;
+    --white: #ffffff;
+    --grey: #D2D2D2;
+    --app-bg: #FAFAFA;
+    --black: #2A363B;
+}
+html {
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    font-size: 16px;
+    font-family: var(--primary-font);
+    line-height: 1.6;
+    background-color: var(--third-color);
+}
+a {
+    text-decoration: none;
+}
+::placeholder {
+    font-family: var(--primary-font);
+    text-align: right;
+    opacity: 0.5;
+}
+/*
+-_-_-_-_-_-_-_-_-_-
+     App Style
+-_-_-_-_-_-_-_-_-_-
+*/
+.container {
+    width: 100%;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+/*
+================
+     Log in
+================
+ */
+.log-in {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border-radius: 2rem;
+    width: 35rem;
+    height: 37rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: all 150ms ease-in;
+}
+.log-in::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--primary-color);
+    z-index: -1;
+    border-radius: 2rem;
+    transition: all 150ms ease-in;
+}
+.log-in::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    background-color: var(--primary-color);
+    z-index: -1;
+    border-radius: 2rem;
+    transition: all 150ms ease-in;
+}
+.log-in:hover::before {
+    top: -2rem;
+    right: -2rem;
+}
+.log-in:hover::after {
+    bottom: -2rem;
+    left: -2rem;
+}
+.log-in__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem;
+}
+.log-in__title {
+    font-size: 4rem;
+    font-family: var(--secondary-font);
+}
+.log-in__label {
+    text-align: right;
+    font-family: var(--primary-font-md);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.log-in__input {
+    height: 4rem;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    text-align: left;
+    padding: 0 1rem;
+    font-family: var(--primary-font);
+}
+.log-in__input--submit {
+    text-align: center;
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    background-color: transparent;
+    transition: all 150ms ease-in;
+    cursor: pointer;
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+.log-in__input--submit:hover {
+    background-color: var(--white);
+    color: var(--secondary-color);
+}
